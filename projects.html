@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,3 +198,205 @@
     </footer>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="publishes.html">Publishes</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="others.html">Others</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+            <h1>Projects</h1>
+
+        <div class="section">    
+            <h2>Rice Leaf Disease Detection using Deep Learning</h2>
+            <p>📅 Completed: 2024 | 🛠 Technologies: Python, Deep Learning, TensorFlow, Streamlit Cloud, Git, TensorRT</p>
+            <p>Developed a deep learning model to detect rice leaf diseases with high accuracy using MobileNetV2.</p>
+            <p><h3><strong>Overview</strong></h3>
+                This project aimed to develop an AI-powered solution for detecting rice leaf diseases from images, helping farmers and agricultural researchers 
+                diagnose plant health issues early. Using deep learning, a CNN-based classification model was built and trained to recognize different types of rice leaf diseases. 
+                The model was later optimized for Edge AI deployment on devices like Jetson Nano using TensorRT for real-time inference.</p>
+            
+            <p><h3>Key Technologies</h3>
+                <ul>
+                    <li><strong>Python - </strong> Programming language used for data preprocessing, model training, and web app development.</li>
+                    <li><strong>Deep Learning & TensorFlow - </strong> Used to develop and train a convolutional neural network (CNN).</li>
+                    <li><strong>MobileNetV2 - </strong> A lightweight, efficient deep learning architecture used for classification tasks.</li>
+                    <li><strong>Streamlit Cloud - </strong> A web framework used to build and deploy the AI-powered application.</li>
+                    <li><strong>Git - </strong> Version control for managing the project and collaboration.</li>
+                    <li><strong>TensorRT - </strong> Used to optimize the deep learning model for real-time inference on Jetson Nano.</li>
+                </ul>
+            </p>
+            
+            <h3>Project Workflow</h3>
+                <ul>
+                    <li><strong>Dataset Preparation & Preprocessing</strong>
+                    <ul>
+                        <li>Collected and curated a dataset of 10,000+ rice leaf images, containing samples of healthy and diseased leaves.</li>
+                        <li>Applied data augmentation techniques like rotation, flipping, and brightness adjustments to improve model generalization.</li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li><strong>Model Development & Training</strong>
+                    <ul>
+                        <li>Used MobileNetV2, a pre-trained deep learning model, combined with dnn classifier for efficient feature extraction and classification.</li>
+                        <li>Fine-tuned the model using transfer learning on rice leaf images.</li>
+                        <li>Achieved 90%+ classification accuracy in detecting different rice leaf diseases.</li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li><strong>Deployment & Real-Time Prediction</strong>
+                    <ul>
+                        <li>Developed a Streamlit web app to allow users to upload images of rice leaves and receive real-time disease predictions.</li>
+                        <li>Integrated the trained TensorFlow model into the web app for instant results.</li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li><strong>Edge AI Optimization using TensorRT</strong>
+                    <ul>
+                        <li>Optimized the trained model using TensorRT to improve inference speed and reduce memory consumption.</li>
+                        <li>Deployed the optimized model on Jetson Nano, allowing for real-time, low-power disease detection in field environments.</li>
+                    </ul>
+                </ul>
+
+                <p><h3>Impact & Learnings</h3>
+                    <ul>
+                        <li><strong>Agricultural Benefits - </strong> Helps farmers quickly identify diseases and take corrective measures.</li>
+                        <li><strong>Real-Time AI Deployment - </strong> Gained hands-on experience in model optimization and Edge AI deployment.</li>
+                        <li><strong>Web-Based AI Application - </strong> Learned how to integrate AI models into interactive web apps using Streamlit.</li>
+                    </ul>
+                </p>    
+            </p>
+        </div>
+
+        <br>
+
+        <div class="section">    
+            <h2>Predicting Customer Churn Using Feature Engineering and Machine Learning</h2>
+            <p>📅 Completed: 2024 | 🛠 Technologies:  Python, Statistics, Machine Learning, Feature Engineering</p>
+            <p>Developed a deep learning model to detect rice leaf diseases with high accuracy using MobileNetV2.</p>
+            <p><h3><strong>Overview</strong></h3>
+                This project aimed to predict customer churn (i.e., customers leaving a company) for PowerCo, an energy provider. By analyzing customer data, 
+                identifying key features, and building a machine learning model, this project helped uncover patterns in customer behavior and provided actionable 
+                insights to reduce churn rates.</p>
+            
+            <p><h3>Key Technologies</h3>
+                <ul>
+                    <li><strong>Python - </strong> Used for data analysis, preprocessing, and machine learning modeling.</li>
+                    <li><strong>Statistics - </strong> Used for exploratory data analysis (EDA) and hypothesis testing.</li>
+                    <li><strong>Machine Learning - </strong> Applied supervised learning techniques for churn prediction.</li>
+                    <li><strong>Feature Engineering - </strong> Created and optimized features to improve model performance.</li>
+                    <li><strong>Pandas & NumPy - </strong> Used for handling large datasets and performing mathematical operations.</li>
+                </ul>
+            </p>
+            
+            <p></p><h3>Project Workflow</h3>
+                <ul>
+                    <li><strong>Data Collection & Exploration</strong>
+                    <ul>
+                        <li><strong>Worked with two datasets:</strong></li>
+                        <ul>
+                            <li><strong>Client Data - </strong>Containing customer profiles, usage history, and churn labels.</li>
+                            <li><strong>Price Data - </strong>Containing pricing details for PowerCo’s energy plans.</li>
+                        </ul>
+                        <li>The combined dataset had 207,608 entries after preprocessing</li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li><strong>Exploratory Data Analysis (EDA)</strong>
+                    <ul>
+                        <li>Used data visualization techniques (histograms, box plots, correlation matrices) to uncover trends in customer behavior.</li>
+                        <li>Identified that 9.7% of PowerCo’s 14,606 clients had churned, highlighting the importance of customer retention strategies.</li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li><strong>Feature Engineering & Model Development</strong>
+                    <ul>
+                        <li>Created new features based on customer behavior, energy usage trends, and pricing sensitivity.</li>
+                        <li>Trained multiple machine learning models, including Random Forest, Logistic Regression, and XGBoost.</li>
+                        <li>Optimized the Random Forest model, achieving 90.03% accuracy in predicting customer churn.</li>
+                    </ul>
+                </ul>
+                <p><h3>Impact & Learnings</h3>
+                    <ul>
+                        <li><strong>Business Insights - </strong> Helped PowerCo identify churn risks and take proactive steps to retain customers.</li>
+                        <li><strong>Data-Driven Decision Making - </strong> Learned how to apply EDA, feature engineering, and machine learning for real-world business problems.</li>
+                        <li><strong>Churn Reduction Strategy - </strong> The model’s insights could be used to create personalized retention campaigns.</li>
+                    </ul>
+                </p>     
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>2025 My Portfolio</p>
+    </footer>
+</body>
+</html>
+>>>>>>> 0b1da69 (Updated portfolio with new pages and enhancements)
