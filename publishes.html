@@ -3,218 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publishes</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Publications by Janardhan Medathati, showcasing research and tools in Data Science, Deep Learning, and Edge AI.">
+    <meta name="keywords" content="Data Science Publications, Deep Learning Research, Edge AI Tools, Janardhan Medathati">
+    <meta name="author" content="Janardhan Medathati">
+    <title>Publishes - Janardhan Medathati</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            padding: 15px;
-            color: white;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav ul li {
-            margin: 10px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .container {
-            margin-top: 30px;
-            padding: 20px;
-        }
-        .section {
-            background: white;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 10px;
-            color: white;
-            background-color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .button:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transform: translateY(-3px);
-        }
-        .output-image {
-            display: block;
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            border: 4px solid #333;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .benchmark-table {
-            width: 100%;
-            max-width: 700px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            text-align: center;
-            background-color: #2d2d2d;
-            color: white;
-            font-family: monospace;
-            font-size: 16px;
-        }
-        .benchmark-table th, .benchmark-table td {
-            border: 1px solid #777;
-            padding: 10px;
-        }
-        .benchmark-table th {
-            background-color: #444;
-        }
-        .benchmark-table td {
-            background-color: #333;
-        }
-
-        code {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        pre {
-            overflow-x: auto;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: relative;
-            margin-top: 20px;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; }
+        .card:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+        .hamburger { display: none; }
+        .nav-menu { display: flex; }
+        .nav-menu a.active { border-bottom: 2px solid #3b82f6; }
+        .hero-bg { background: linear-gradient(to right, #e5e7eb, #c6d9ff); }
+        .dark .header-bg { background: linear-gradient(to right, #1f2937, #374151); }
+        .timeline { position: relative; padding-left: 3rem; }
+        .timeline::before { content: ''; position: absolute; left: 1.25rem; top: 0; bottom: 0; width: 4px; background: #3b82f6; }
+        .timeline-item { position: relative; margin-bottom: 2.5rem; padding-right: 1rem; }
+        .timeline-item::before { content: ''; position: absolute; left: -0.5rem; top: 0.5rem; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 2px solid #fff; }
+        .dark .timeline-item::before { border-color: #1f2937; }
+        .timeline-item h3, .timeline-item p { word-break: break-word; max-width: 100%; }
+        .achievement-item { display: flex; align-items: center; gap: 1rem; }
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            .benchmark-table {
-                font-size: 14px;
-                overflow-x: auto;
-                display: block;
-            }
-            .button {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
+            .hamburger { display: block; }
+            .nav-menu { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #1f2937; flex-direction: column; padding: 1rem; }
+            .nav-menu.active { display: flex; }
+            .timeline { padding-left: 2.5rem; }
+            .timeline::before { left: 0.75rem; }
+            .timeline-item { padding-right: 0.5rem; }
         }
     </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="publishes.html">Publishes</a></li>
-                <li><a href="work.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="others.html">Others</a></li>
-                <li><a href="contact.html">Contact</a></li>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <header class="bg-gray-800 dark:bg-gray-800 text-white sticky-nav">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">Janardhan M.</div>
+            <div class="flex items-center space-x-4">
+                
+                <button class="hamburger md:hidden" aria-label="Toggle Menu">☰</button>
+            </div>
+            <ul class="nav-menu flex space-x-6 md:flex md:items-center">
+                <li><a href="index.html" class="hover:text-blue-400 transition dark:text-gray-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-blue-400 transition dark:text-gray-300">About</a></li>
+                <li><a href="publishes.html" class="active hover:text-blue-400 transition dark:text-gray-300">Publishes</a></li>
+                <li><a href="work.html" class="hover:text-blue-400 transition dark:text-gray-300">Work</a></li>
+                <li><a href="projects.html" class="hover:text-blue-400 transition dark:text-gray-300">Projects</a></li>
+                <li><a href="others.html" class="hover:text-blue-400 transition dark:text-gray-300">Others</a></li>
+                <li><a href="contact.html" class="hover:text-blue-400 transition dark:text-gray-300">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container">
-        <h1>My Publishes</h1>
 
-    
-        <div class="section">
-            <h2>PyPerfCheck – A High-Performance Python Benchmarking Library</h2>
-            <p><strong>Overview:</strong> PyPerfCheck is a high-performance benchmarking library for Python. 
-                It allows you to measure and compare the execution time, CPU usage, and memory usage of Python functions. It supports synchronous, asynchronous, multi-threaded, and multi-processed functions, making it a versatile tool for performance analysis.</p>
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>Benchmark Synchronous Functions: Measure execution time, CPU usage, and memory usage.</li>
-                <li>Benchmark Asynchronous Functions: Supports async functions for I/O-bound tasks.</li>
-                <li>Multi-Threading Benchmarking: Test functions using multiple threads.</li>
-                <li>Multi-Processing Benchmarking: Test functions using multiple processes.</li>
-                <li>Visual Reports: Generate bar charts for execution time, CPU usage, and memory usage.</li>
-                <li>Easy-to-Use: Simple API with decorators and helper methods.</li>
-            </ul>
+    <main class="container mx-auto px-4 py-12">
+        <!-- Header Section -->
+        <section class="header-bg py-12 text-center mb-12 rounded-lg" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">My Publications</h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+                Showcasing my research, tools, and contributions to Data Science and AI
+            </p>
+        </section>
 
-            <p><strong>Installation:</strong></p>
-            <ul>
-                <li>Install PyPerfCheck using pip:<br>
-                    <code>pip install lazyapi</code><br> 
-                    <code>pip install pyperfcheck==0.2.0</code></li>
-            </ul>
-
-            <p><strong>Quick Start:</strong></p>
-            <ul>
-                <li>
-                    1. Import the library:
-                    <pre>
-                    <code>
-                from pyperfcheck import PyPerfCheck
-                
-                def method1():
-                    return sum(range(1000000))
-                def method2():
-                    return sum([x for x in range(1000000)])
-                
-                PyPerfCheck.compare([method1, method2])
-                    </code>
-                    </pre>
-                </li>
-            </ul>
-
-            <!-- Output Image -->
-            <h3>Example Output:</h3>
-            <table class="benchmark-table">
-                <thead>
-                    <tr>
-                        <th>Function</th>
-                        <th>Avg Time (s)</th>
-                        <th>Avg CPU (%)</th>
-                        <th>Avg Mem (MB)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>method1</td>
-                        <td>0.041405</td>
-                        <td>75.2</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>method2</td>
-                        <td>0.085641</td>
-                        <td>93.38</td>
-                        <td>1.83</td>
-                    </tr>
-                </tbody>
-            </table>
-            <img src="graph_publish.png" alt="PyPerfCheck Benchmarking Output" class="output-image">
-            <p><strong>GitHub:</strong> <a class="button" href="https://github.com/Janardhan11/pyperfcheck" target="_blank">View on GitHub</a></p>
-            <p><strong>PyPI:</strong> <a class="button" href="https://pypi.org/project/pyperfcheck/" target="_blank">View on PyPI</a></p>
-            <p><strong>Medium:</strong> <a class="button" href="https://medium.com/@7janardhan7/pyperfcheck-the-ultimate-python-benchmarking-tool-for-effortless-performance-optimization-d6187fce637b" target="_blank">View on medium</a></p>
+        <!-- Publication Filter -->
+        <div class="mb-8 text-center" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 mr-2" data-filter="all">All</button>
+            <button class="filter-btn bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 mr-2" data-filter="tool">Tools</button>
+            <button class="filter-btn bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200" data-filter="research">Research</button>
         </div>
+
+        <!-- Publication List -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md tool">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white">PyPerfCheck</h3>
+                <p class="text-gray-500 dark:text-gray-400">Published: April 2024</p>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">A Python benchmarking library, to measure execution time, CPU, and memory usage.</p>
+                <div class="mt-4 flex space-x-2">
+                    <a href="https://pypi.org/project/PyPerfCheck/" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:bg-blue-500" target="_blank" aria-label="View PyPerfCheck on PyPI">PyPI</a>
+                    <a href="https://medium.com/@7janardhan7/pyperfcheck-the-ultimate-python-benchmarking-tool-for-effortless-performance-optimization-d6187fce637b" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:bg-blue-500" target="_blank" aria-label="View PyPerfCheck article on Medium">Medium</a>
+                    <a href="https://github.com/Janardhan11/PyPerfCheck" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white dark:border-blue-500 dark:text-blue-500" target="_blank" aria-label="View PyPerfCheck on GitHub">GitHub</a>
+                </div>
+            </div>
+            <!-- Placeholder for future research publication -->
+            <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md research" style="display: none;">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Convolutional Autoencoders for Image Quality Assessment</h3>
+                <p class="text-gray-500 dark:text-gray-400">Published: In Progress (Expected 2025)</p>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">Research paper on optimizing image quality models, conducted during my IIT Mandi internship. Awaiting journal submission.</p>
+                <div class="mt-4 flex space-x-2">
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:bg-blue-500 opacity-50 cursor-not-allowed" aria-label="Publication Link (Coming Soon)">Coming Soon</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Highlights -->
+        <section class="mb-12 mt-12" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-6">Publication Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <!-- <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                   <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">500+</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Downloads of PyPerfCheck on PyPI</p> -->
+                </div>
+                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                    <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">1</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Published Tool (More to Come)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call-to-Action -->
+        <section class="text-center mb-12" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Explore More</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+                Dive into my projects or contact me to discuss my research and potential collaborations in AI and Data Science.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="projects.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition dark:bg-blue-500" aria-label="View Projects">View Projects</a>
+                <a href="contact.html" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition dark:border-blue-500 dark:text-blue-500" aria-label="Contact Me">Contact Me</a>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>2025 My Portfolio</p>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300">© 2025 Janardhan Medathati. All rights reserved.</p>
+            <div class="mt-2 flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/medathati-janardhan/" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Janardhan11" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="mailto:your-email@example.com" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" aria-label="Email">Email</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+        // Hamburger Menu
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        // Dark Mode Toggle
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+        // Publication Filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.card').forEach(card => {
+                    card.style.display = filter === 'all' || card.classList.contains(filter) ? 'block' : 'none';
+                });
+                btn.classList.add('bg-blue-600', 'text-white', 'dark:bg-blue-500');
+                document.querySelectorAll('.filter-btn').forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.classList.remove('bg-blue-600', 'text-white', 'dark:bg-blue-500');
+                        otherBtn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-800', 'dark:text-gray-200');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
