@@ -3,146 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Experience</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Work experience of Janardhan Medathati, showcasing expertise in Data Science, Deep Learning, and Edge AI.">
+    <meta name="keywords" content="Data Science Work, Deep Learning Experience, Edge AI, Janardhan Medathati">
+    <meta name="author" content="Janardhan Medathati">
+    <title>Work - Janardhan Medathati</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            padding: 15px;
-            color: white;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav ul li {
-            margin: 10px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .container {
-            margin-top: 30px;
-            padding: 20px;
-        }
-        .section {
-            background: white;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-	.output-image {
-            display: block;
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            border: 4px solid #333;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	}
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: relative;
-            margin-top: 20px;
-        }
-	@media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            .benchmark-table {
-                font-size: 14px;
-                overflow-x: auto;
-                display: block;
-            }
-            .button {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
+        body { font-family: 'Inter', sans-serif; }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; }
+        .card:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+        .hamburger { display: none; }
+        .nav-menu { display: flex; }
+        .nav-menu a.active { border-bottom: 2px solid #3b82f6; }
+        .hero-bg { background: linear-gradient(to right, #e5e7eb, #c6d9ff); }
+        .dark .header-bg { background: linear-gradient(to right, #1f2937, #374151); }
+        .timeline { position: relative; padding-left: 3rem; }
+        .timeline::before { content: ''; position: absolute; left: 1.25rem; top: 0; bottom: 0; width: 4px; background: #3b82f6; }
+        .timeline-item { position: relative; margin-bottom: 2.5rem; padding-right: 1rem; }
+        .timeline-item::before { content: ''; position: absolute; left: -0.5rem; top: 0.5rem; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 2px solid #fff; }
+        .dark .timeline-item::before { border-color: #1f2937; }
+        .timeline-item h3, .timeline-item p { word-break: break-word; max-width: 100%; }
+        .achievement-item { display: flex; align-items: center; gap: 1rem; }
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-menu { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #1f2937; flex-direction: column; padding: 1rem; }
+            .nav-menu.active { display: flex; }
+            .timeline { padding-left: 2.5rem; }
+            .timeline::before { left: 0.75rem; }
+            .timeline-item { padding-right: 0.5rem; }
         }
     </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="publishes.html">Publishes</a></li>
-                <li><a href="work.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="others.html">Others</a></li>
-                <li><a href="contact.html">Contact</a></li>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <header class="bg-gray-800 dark:bg-gray-800 text-white sticky-nav">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">Janardhan M.</div>
+            <div class="flex items-center space-x-4">
+                
+                <button class="hamburger md:hidden" aria-label="Toggle Menu">☰</button>
+            </div>
+            <ul class="nav-menu flex space-x-6 md:flex md:items-center">
+                <li><a href="index.html" class="hover:text-blue-400 transition dark:text-gray-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-blue-400 transition dark:text-gray-300">About</a></li>
+                <li><a href="publishes.html" class="hover:text-blue-400 transition dark:text-gray-300">Publishes</a></li>
+                <li><a href="work.html" class="active hover:text-blue-400 transition dark:text-gray-300">Work</a></li>
+                <li><a href="projects.html" class="hover:text-blue-400 transition dark:text-gray-300">Projects</a></li>
+                <li><a href="others.html" class="hover:text-blue-400 transition dark:text-gray-300">Others</a></li>
+                <li><a href="contact.html" class="hover:text-blue-400 transition dark:text-gray-300">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container">
-	 <h1>Work Experience</h1>
-        <div class="section">
-        <h2>Deep Learning Intern – IIT Mandi</h2>
-        <p>📍 Himachal Pradesh, India | 📅 June 2023 – October 2023</p>
-        <p>🛠 <strong>Technologies:</strong> Python, Deep Learning, TensorFlow, Google Colab</p>
-        
-        <p><h3><strong>Overview</strong></h3>
-            During my tenure as a Deep Learning Intern at IIT Mandi, I worked on cutting-edge AI models for image processing and 
-                quality assessment. My research focused on designing self-supervised learning techniques for image quality enhancement and 
-                developing efficient deep learning architectures for real-time evaluation of image distortions.</p>
-        
-        
-        <p><h3>Key Contributions & Achievements</h3>
-            <ul>
-                <li><strong>Developed an SSIM-Based Distortion Mapping Technique:</strong>
-                    <ul>
-                        <li>Analyzed over 6,000+ images to understand structural distortions using Structural Similarity Index (SSIM).</li>
-                        <li>Created a distortion mapping pipeline that quantifies the level of degradation in images without requiring a reference.</li>
-                        <li>This dataset was later used as the ground truth for training an unsupervised Convolutional Autoencoder (CAE) model.</li>
-                    </ul>
-                </li>
-                <li><strong>Designed a CAE-Based No-Reference Image Quality Assessment Model:</strong>
-                    <ul>
-                        <li>Implemented a Convolutional Autoencoder (CAE) trained on distorted images to predict image quality scores.</li>
-                        <li>The model achieved an impressive 0.02% loss rate, demonstrating high accuracy in detecting and assessing image quality.</li>
-                        <li>Eliminated the need for reference images, making the system efficient, scalable, and applicable for real-time use in scenarios like medical imaging, satellite image enhancement, and autonomous vision systems.</li>
-                    </ul>
-                </li>
-                <li><strong>Optimized Image Quality Assessment Process:</strong>
-                    <ul>
-                        <li>Improved the evaluation time by 60% by optimizing deep learning model architecture and leveraging TensorFlow optimizations.</li>
-                        <li>Used GPU acceleration on Google Colab to enhance processing efficiency and enable faster inference.</li>
-                        <li>The optimized system significantly improved the performance of image-based AI models, ensuring that they work effectively in real-world applications.</li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
-        
-        <p></p><h3>Impact & Learnings</h3>
-            <ul>
-                <li>✅ <strong>Real-World Application:</strong> My work at IIT Mandi contributed to the development of no-reference image quality assessment models, which are crucial for applications in medical imaging, satellite imagery, and autonomous vision systems.</li>
-                <li>✅ <strong>Optimization & Performance Engineering:</strong> I learned to optimize deep learning models for speed and accuracy, making them viable for real-time deployment on edge devices.</li>
-                <li>✅ <strong>Advanced Deep Learning Concepts:</strong> Gained hands-on experience with Autoencoders, Self-Supervised Learning, Image Enhancement, and Distortion Analysis techniques.</li>
-            </ul>
-        </p>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- Header Section -->
+        <section class="header-bg py-12 text-center mb-12 rounded-lg" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">My Work Experience</h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+                Highlighting my journey in Data Science, Deep Learning, and AI Innovation
+            </p>
+        </section>
+
+        <!-- Work Experience Timeline -->
+        <section class="mb-12" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white"><br>AI Research Intern , Indian Institute of Technology (IIT-Mandi)</h3>
+                    <p class="text-gray-500 dark:text-gray-400">June 2023 – July 2023</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Designed and trained a MobileNet-inspired CNN for NRIQA, reducing model size by 60% compared to traditional
+                        CNNs.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Leveraging the TID2013 dataset’s distorted image samples, trained and validated a no-reference image quality prediction
+                        model.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Achieved a validation MAE of 0.2830 after 20 epochs, demonstrating strong model performance.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Deployed the model on Hugging Face Spaces with an average inference time of lessthan 3 second, enabling fast and interactive
+                        quality scoring.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2"><strong>Skills:</strong> Python, Deep Learning, TensorFlow, Image Processing, Research, OpenCV, NumPy, Matplotlib, Git.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2"><strong>Impact:</strong> Improved model efficiency for real-time applications.</p><br>
+                    <a href="https://github.com/Janardhan11/No-Reference-Image-Quality-Reference" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white dark:border-blue-500 dark:text-blue-500" target="_blank" aria-label="View NRIQA on GitHub">GitHub</a>
+                </div>
+                <!-- Placeholder for future role -->
+                <div class="timeline-item" style="display: none;">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white"><br>Freelance AI Consultant</h3>
+                    <p class="text-gray-500 dark:text-gray-400">Expected 2025</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Providing AI solutions for startups, focusing on computer vision and Edge AI deployment.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2"><strong>Skills:</strong> Edge AI, Consulting, Client Management</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2"><strong>Impact:</strong> Awaiting client projects (Coming Soon).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call-to-Action -->
+        <section class="text-center mb-12" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Let's Work Together</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+                Interested in my expertise? Contact me to discuss opportunities or explore my projects for more details.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition dark:bg-blue-500" aria-label="Contact Me">Contact Me</a>
+                <a href="projects.html" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition dark:border-blue-500 dark:text-blue-500" aria-label="View Projects">View Projects</a>
+            </div>
+        </section>
     </main>
-        <footer>
-            <p>2025 My Portfolio</p>
-        </footer>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300">© 2025 Janardhan Medathati. All rights reserved.</p>
+            <div class="mt-2 flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/medathati-janardhan/" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Janardhan11" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="mailto:your-email@example.com" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" aria-label="Email">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+        // Hamburger Menu
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        // Dark Mode Toggle
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+    </script>
 </body>
 </html>
