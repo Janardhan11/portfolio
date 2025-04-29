@@ -3,139 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - My Portfolio</title>
+    <meta name="description" content="About Janardhan Medathati, a Data Scientist and Deep Learning Researcher specializing in computer vision, Edge AI, and innovative AI solutions.">
+    <meta name="keywords" content="Data Science, Deep Learning, Computer Vision, Edge AI, Janardhan Medathati, AI Research">
+    <meta name="author" content="Janardhan Medathati">
+    <title>About - Janardhan Medathati</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            padding: 15px;
-            color: white;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav ul li {
-            margin: 10px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .container {
-            margin-top: 30px;
-            padding: 20px;
-        }
-        .section {
-            background: white;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-	   position: relative;
-            text-align: center;
-        }
-
+        body { font-family: 'Inter', sans-serif; }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; }
+        .card:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+        .hamburger { display: none; }
+        .nav-menu { display: flex; }
+        .nav-menu a.active { border-bottom: 2px solid #3b82f6; }
+        .hero-bg { background: linear-gradient(to right, #e5e7eb, #c6d9ff); }
+        .dark .header-bg { background: linear-gradient(to right, #1f2937, #374151); }
+        .timeline { position: relative; padding-left: 3rem; }
+        .timeline::before { content: ''; position: absolute; left: 1.25rem; top: 0; bottom: 0; width: 4px; background: #3b82f6; }
+        .timeline-item { position: relative; margin-bottom: 2.5rem; padding-right: 1rem; }
+        .timeline-item::before { content: ''; position: absolute; left: -0.5rem; top: 0.5rem; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 2px solid #fff; }
+        .dark .timeline-item::before { border-color: #1f2937; }
+        .timeline-item h3 { word-break: break-word; max-width: 100%; }
+        .timeline-item p { word-break: break-word; max-width: 100%; }
+        .achievement-item { display: flex; align-items: center; gap: 1rem; }
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            .benchmark-table {
-                font-size: 14px;
-                overflow-x: auto;
-                display: block;
-            }
-            .button {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
+            .hamburger { display: block; }
+            .nav-menu { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #1f2937; flex-direction: column; padding: 1rem; }
+            .nav-menu.active { display: flex; }
+            .timeline { padding-left: 2.5rem; }
+            .timeline::before { left: 0.75rem; }
+            .timeline-item { padding-right: 0.5rem; }
         }
     </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="publishes.html">Publishes</a></li>
-                <li><a href="work.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="others.html">Others</a></li>
-                <li><a href="contact.html">Contact</a></li>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <header class="bg-gray-800 dark:bg-gray-800 text-white sticky-nav">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">Janardhan M.</div>
+            <div class="flex items-center space-x-4">
+                
+                <button class="hamburger md:hidden" aria-label="Toggle Menu">☰</button>
+            </div>
+            <ul class="nav-menu flex space-x-6 md:flex md:items-center">
+                <li><a href="index.html" class="hover:text-blue-400 transition dark:text-gray-300">Home</a></li>
+                <li><a href="about.html" class="active hover:text-blue-400 transition dark:text-gray-300">About</a></li>
+                <li><a href="publishes.html" class="hover:text-blue-400 transition dark:text-gray-300">Publishes</a></li>
+                <li><a href="work.html" class="hover:text-blue-400 transition dark:text-gray-300">Work</a></li>
+                <li><a href="projects.html" class="hover:text-blue-400 transition dark:text-gray-300">Projects</a></li>
+                <li><a href="others.html" class="hover:text-blue-400 transition dark:text-gray-300">Others</a></li>
+                <li><a href="contact.html" class="hover:text-blue-400 transition dark:text-gray-300">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main class="container">
-        <h1>About Me</h1>
-        <div class="section">
-            <h3><strong>Who Am I?</strong></h3>
-            <p>Hello! I am <strong>Janardhan Medathati</strong>, a passionate Data Scientist & Deep Learning Researcher specializing in image processing, computer vision, and Edge AI. My expertise lies in developing computationally 
-                efficient deep learning models for image enhancement, real-time AI applications, and automated machine learning systems.</p>
-                <p>Currently, I am focusing on creating AI-powered solutions that enhance image quality using deep learning techniques. I am also deeply interested in Edge AI, where I optimize deep learning models for deployment
-                     on low-power devices like Jetson Nano and Raspberry Pi to make AI more accessible and efficient.</p>
 
-            <h3><strong>Professional Experience</strong></h3>
-            <p><strong>Deep Learning Intern at IIT Mandi</strong></p>
-            <p>Developed an SSIM-based distortion mapping technique for over 6,000+ images. 
-                Designed a no-reference image quality assessment model using a Convolutional Autoencoder (CAE), reducing computation time by 60%..</p>
+    <main class="container mx-auto px-4 py-12">
+        <!-- Header Section -->
+        <section class="header-bg py-12 text-center mb-12 rounded-lg" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">About Me</h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+                Innovating at the Intersection of Data Science, Deep Learning, and Real-World Impact
+            </p>
+        </section>
 
-            <p><strong>SaaS Business Development</strong></p>
-            <p>Working on launching a SaaS-based AI business focused on automated image enhancement for industries like medical imaging, satellite imagery, and photography.</p>
+        <!-- Introduction -->
+        <section class="mb-12" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Who I Am</h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                I'm <strong>Janardhan Medathati</strong>, I am a passionate and curious individual who loves exploring how data and technology can solve real-world problems. I enjoy learning new things, taking on challenges, and finding smart solutions. I have also published my work in a library, sharing my knowledge with a wider audience. I believe in continuous growth and always aim to do my best in everything I take up.
+            </p>
+        </section>
 
-            <h3><strong>Interests & Career Goals</strong></h3>
-            <p>Interested in computer vision, Edge AI, and real-time AI applications. Goal: Develop lightweight AI models for deployment on edge devices.</p>
+        <!-- Professional Journey -->
+        <section class="mb-12" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">My Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white"><br>Master's in Data Science</h3>
+                    <p class="text-gray-500 dark:text-gray-400">2022 – 2024</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Researching advanced deep learning techniques for image processing and real-time AI applications.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white"><br>Deep Learning Intern, IIT Mandi</h3>
+                    <p class="text-gray-500 dark:text-gray-400">June 2023 – October 2023</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Developed a no-reference image quality assessment model took inspiration from MobileNet architecture, reducing computation time by 60%.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white"><br>A Sample Survey on cloud Platforms</h3>
+                    <p class="text-gray-500 dark:text-gray-400">2022</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Gathered data and used statistical methods to complete a survey-based project on cloud platforms.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white"><br>Bachelor Degree in Statistics</h3>
+                    <p class="text-gray-500 dark:text-gray-400">2019 – 2022</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">Graduated with a strong foundation in algorithms, data structures, and Statistics.</p>
+                </div>
+            </div>
+        </section>
 
-            <h3><strong>Skills & Technologies</strong></h3>
-            <ul>
-                <li>💻 Programming: Python, TensorFlow, OpenCV, NumPy, Pandas</li>
-                <li>🤖 Machine Learning: Supervised & Unsupervised Learning, Self-Supervised Learning, Image Super-Resolution, Deep Learning</li>
-                <li>📊 Data Science: Collection, Cleaning, Visualization, Feature Engineering</li>
-                <li>☁ Cloud Platforms, Model Deployment</li>
-            </ul>
+        <!-- Skills Matrix -->
+        <section class="mb-12" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Programming & Tools</h3>
+                    <ul class="text-gray-600 dark:text-gray-300 mt-2 list-disc list-inside">
+                        <li>Python (Pandas, NumPy, Matplotlib)</li>
+                        <li>TensorFlow, OpenCV</li>
+                        <li>Jupyter, VS Code, Git</li>
+                    </ul>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Machine & Deep Learning</h3>
+                    <ul class="text-gray-600 dark:text-gray-300 mt-2 list-disc list-inside">
+                        <li>Convolutional Neural Networks (CNNs)</li>
+                        <li>MobileNetV2, Autoencoders</li>
+                        <li>Random Forest, Feature Engineering, Regressions</li>
+                    </ul>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Deployment & Applications</h3>
+                    <ul class="text-gray-600 dark:text-gray-300 mt-2 list-disc list-inside">
+                        <li>Edge AI (Jetson Nano, TensorRT)</li>
+                        <li>Streamlit, Flask, Cloud Platforms</li>
+                        <li>Computer Vision, Image Processing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <h3><strong>Hobbies & Personal Interests</strong></h3>
-            <p>Exploring AI research, playing chess.</p>
+        <!-- Achievements & Certifications -->
+        <section class="mb-12" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Achievements & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div class="achievement-item">
+                    <span class="text-2xl">🥇</span>
+                    <p class="text-gray-600 dark:text-gray-300">Gold Medalist in Karate, showcasing discipline and dedication.</p>
+                </div>
+                <div class="achievement-item">
+                    <span class="text-2xl">🏅</span>
+                    <p class="text-gray-600 dark:text-gray-300">Best NSS Volunteer Award (2019–2022) for community service.</p>
+                </div>
+                <div class="achievement-item">
+                    <span class="text-2xl">📜</span>
+                    <p class="text-gray-600 dark:text-gray-300">Machine Learning with Python Certification (Coursera).</p>
+                </div>
+                <div class="achievement-item">
+                    <span class="text-2xl">📜</span>
+                    <p class="text-gray-600 dark:text-gray-300">BCG Data Science Job Simulation (Forage).</p>
+                </div>
+            </div>
+        </section>
 
-            <h3><strong>Projects & Research</strong></h3>
-            <p>Notable projects: Rice Leaf Disease Detection, Customer Churn Prediction, Automated Image Enhancement.</p>
+        <!-- Vision & Interests -->
+        <section class="mb-12" data-aos="fade-up" data-aos-delay="500">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Vision & Interests</h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                My vision is To grow as a skilled data science professional who builds practical and intelligent solutions that make a positive impact on businesses and society. I aim to continuously learn, innovate, and contribute to meaningful projects in the fields of AI, machine learning, and data-driven technologies.<br>
+                I am deeply interested in machine learning, deep learning, computer vision, and real-time AI applications. I enjoy working on projects that involve data analysis, image processing, and model deployment. I am also passionate about exploring cloud technologies and lightweight AI solutions for real-world problems.
+            </p>
+        </section>
 
-            <h3><strong>Education & Achievements</strong></h3>
-            <p>🎓 Master's in Data Science, Research in Efficient Deep Learning for Image Processing.</p>
-            <p>🥇 Gold Medalist in Karate</p>
-            <p>🏅 Best NSS Volunteer</p>
-
-            <h3><strong>Career Goals & Interests</strong></h3>
-            <p>🚀 Developing real-time AI solutions and autonomous systems.</p>
-            <p>💡 Exploring AI research, coding, chess, and martial arts.</p>
-        </div>
+        <!-- Call-to-Action -->
+        <section class="text-center mb-12" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to Collaborate?</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+                Let's explore opportunities to innovate in AI, computer vision, or Edge AI. Connect with me or dive into my projects to see my work in action.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition dark:bg-blue-500" aria-label="Contact Me">Contact Me</a>
+                <a href="projects.html" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition dark:border-blue-500 dark:text-blue-500" aria-label="View Projects">View Projects</a>
+            </div>
+        </section>
     </main>
-    
-    <footer>
-        <p>2025 My Portfolio</p>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300">© 2025 Janardhan Medathati. All rights reserved.</p>
+            <div class="mt-2 flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/medathati-janardhan/" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Janardhan11" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="mailto:your-email@example.com" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" aria-label="Email">Email</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+        // Hamburger Menu
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        // Dark Mode Toggle
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+    </script>
 </body>
 </html>
