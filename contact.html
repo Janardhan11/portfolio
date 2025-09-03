@@ -55,53 +55,121 @@
             </ul>
         </nav>
     </header>
-
-    <main class="container mx-auto px-4 py-12">
-        <!-- Header Section -->
-        <section class="header-bg py-12 text-center mb-12 rounded-lg" data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">Get in Touch</h1>
-            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
-                I’d love to hear from you about collaborations, opportunities, or just to chat about AI!
-            </p>
-        </section>
-
-        <!-- Contact Form -->
-        <section class="mb-12 max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <form action="https://formspree.io/f/xwpovvqn" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg border dark:bg-gray-800 dark:border-gray-700" required aria-label="Your Name">
-                <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded-lg border dark:bg-gray-800 dark:border-gray-700" required aria-label="Your Email">
-                <textarea name="message" placeholder="Your Message" class="w-full p-3 rounded-lg border dark:bg-gray-800 dark:border-gray-700" rows="5" required aria-label="Your Message"></textarea>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition dark:bg-blue-500" aria-label="Send Message">Send Message</button>
-            </form>
-            <p class="text-gray-600 dark:text-gray-300 mt-4 text-center">I’ll get back to you within 48 hours!</p>
-        </section>
-
-        <!-- Social Links -->
-        <section class="text-center mb-12" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Connect With Me</h2>
-            <div class="flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/in/medathati-janardhan/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
-                <a href="https://github.com/Janardhan11" class="text-blue-600 hover:text-blue-800 dark:text-blue-400" target="_blank" aria-label="GitHub Profile">GitHub</a>
-                <a href="mailto:7janardhan7@gmail.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400" aria-label="Email Me">Email</a>
-            </div>
-        </section>
-
-        <!-- Call-to-Action -->
-        <section class="text-center mb-12" data-aos="fade-up" data-aos-delay="300">
-            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Looking forward to connecting and exploring new opportunities together!
-            </p>
-        </section>
+    <main class="container">
+        <div class="contact-section">
+            <h1>Contact Me</h1>
+            <button class="contact-button email-btn" onclick="window.location.href='mailto:7janardhan7@gmail.com'">📧 Email Me</button>
+            <button class="contact-button linkedin-btn" onclick="window.open('https://www.linkedin.com/in/medathati-janardhan/', '_blank')">🔗 LinkedIn</button>
+            <button class="contact-button github-btn" onclick="window.open('https://github.com/Janardhan11', '_blank')">🐙 GitHub</button>
+        </div>
     </main>
-
-    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-300">© 2025 Janardhan Medathati. All rights reserved.</p>
-            <div class="mt-2 flex justify-center space-x-4">
-                <a href="https://www.linkedin.com/in/medathati-janardhan/" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-                <a href="https://github.com/Janardhan11" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" target="_blank" aria-label="GitHub">GitHub</a>
-                <a href="mailto:7janardhan7@gmail.com" class="text-blue-400 hover:text-blue-500 dark:text-blue-300" aria-label="Email">Email</a>
-            </div>
+    
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .contact-section {
+            background: white;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .contact-section h1 {
+            margin-bottom: 20px;
+        }
+        .contact-button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+        .email-btn {
+            background-color: #007BFF;
+            color: white;
+        }
+        .linkedin-btn {
+            background-color: #0077B5;
+            color: white;
+        }
+        .github-btn {
+            background-color: #24292E;
+            color: white;
+        }
+        .contact-button:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="publishes.html">Publishes</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="others.html">Others</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="contact-section">
+            <h1>Contact Me</h1>
+            <button class="contact-button email-btn" onclick="window.location.href='mailto:your-email@example.com'">📧 Email Me</button>
+            <button class="contact-button linkedin-btn" onclick="window.open('https://www.linkedin.com/in/medathati-janardhan/', '_blank')">🔗 LinkedIn</button>
+            <button class="contact-button github-btn" onclick="window.open('https://github.com/Janardhan11', '_blank')">🐙 GitHub</button>
         </div>
     </footer>
 
@@ -121,3 +189,4 @@
     </script>
 </body>
 </html>
+>>>>>>> 0b1da69 (Updated portfolio with new pages and enhancements)
