@@ -652,3 +652,92 @@ p.lead{color:var(--muted); margin:0 0 20px}
   50%  { transform: translateY(10px); opacity: 1; }
   100% { transform: translateY(0); opacity: 0.7; }
 }
+/* ---------- Mobile-first responsive tweaks (paste at end of style.css) ---------- */
+
+/* Make images scale cleanly */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Global adjustments for small screens */
+@media (max-width: 900px) {
+  /* Header: smaller, keep fixed and readable */
+  header, .site.nav {
+    height: 56px !important;
+  }
+  main { padding-top: calc(56px + 12px) !important; }
+
+  /* Hero: smaller text and spacing */
+  .hero-inner { margin: 28px auto; padding: 0 18px; }
+  .hero h1 { font-size: 28px !important; }
+  .role { font-size: 14px !important; }
+  .tagline { font-size: 13px !important; max-width: 92%; margin: 0 auto 18px; }
+
+  /* CTA buttons stack */
+  .cta { flex-direction: column; gap: 12px; align-items: center; }
+  .btn-primary, .btn-ghost { width: 100%; max-width: 320px; }
+
+  /* Social icons smaller and with spacing */
+  .socials { gap: 18px; margin-top: 16px; }
+
+  /* About section: stack cards + text */
+  .about-grid { grid-template-columns: 1fr !important; gap: 18px; padding: 0 18px; }
+  .about-left, .about-right { width: 100%; }
+
+  /* Feature cards: full-width visuals */
+  .about-right .feature-card { padding: 14px; border-radius: 12px; }
+
+  /* Chips should wrap and remain readable */
+  .chips { gap: 8px; }
+  .chip { padding: 8px 10px; font-size: 13px; }
+
+  /* Skills section: single-column grid */
+  .skills-grid { grid-template-columns: 1fr !important; padding: 0 16px; gap: 14px; }
+
+  /* Stats row: stack vertically */
+  .stats-grid { grid-template-columns: 1fr !important; gap: 14px; padding: 10px 16px; }
+
+  /* Projects grid: 1 column on very small, 2 on medium */
+  .projects-grid { grid-template-columns: 1fr !important; gap: 18px; padding: 0 16px; }
+  .project-card img { height: 160px; object-fit: cover; }
+
+  /* Project card: ensure actions are stacked */
+  .project-card .actions { flex-direction: column; gap: 10px; }
+  .project-card .actions .btn-primary, .project-card .actions .btn-ghost { width: 100%; }
+
+  /* Experience/Education: cards stretch and meta stacks under title */
+  .exp-card { padding: 16px; }
+  .exp-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .exp-meta { text-align: left; min-width: auto; }
+
+  /* Make bullets and text more compact */
+  .exp-desc, .exp-achievements ul, .exp-achievements li { font-size: 14px; line-height: 1.6; }
+
+  /* Contact: stack the grid columns vertically */
+  .contact-grid { grid-template-columns: 1fr !important; padding: 0 16px; gap: 18px; }
+  .contact-form .form-row { flex-direction: column; gap: 12px; }
+  .contact-form .btn-primary { width: 100%; }
+
+  /* Footer: stack columns */
+  .site-footer .footer-top { grid-template-columns: 1fr !important; padding: 18px 16px; }
+  .footer-desc { font-size: 14px; }
+  .footer-links li { font-size: 14px; }
+
+  /* Reduce large section paddings so mobile isn't too long */
+  section { padding-top: 48px; padding-bottom: 48px; }
+  .about-section, .skills-section, .experience-section, .contact-section { padding-top: 40px; padding-bottom: 40px; }
+
+  /* Slightly increase tappable area for icons & buttons */
+  .socials a, .footer-socials a { padding: 6px; border-radius: 6px; }
+
+  /* Ensure fixed header overlays correctly on small screens */
+  header { z-index: 99999 !important; }
+}
+
+/* Additional narrowing adjustment for very small devices */
+@media (max-width: 420px) {
+  .hero h1 { font-size: 22px !important; }
+  .role, .tagline { font-size: 13px !important; }
+  .btn-primary, .btn-ghost { padding: 12px 14px; font-size: 14px; }
+  .project-card img { height: 140px; }
+  .chips { gap: 6px; }
+  .chip { font-size: 12px; padding: 6px 8px; }
+}
