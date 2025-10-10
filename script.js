@@ -1,23 +1,23 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-    // shrink header on scroll (optional)
-(function () {
-  const header = document.querySelector('header');
-  const navRow = document.querySelector('.site.nav');
-  if (!header || !navRow) return;
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y > 80) {
-      header.classList.add('shrink');
-      navRow.classList.add('shrink');
-    } else {
-      header.classList.remove('shrink');
-      navRow.classList.remove('shrink');
-    }
-    lastScroll = y;
-  }, { passive: true });
-})();
+  // shrink header on scroll (optional)
+  (function () {
+    const header = document.querySelector('header');
+    const navRow = document.querySelector('.site.nav');
+    if (!header || !navRow) return;
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y > 80) {
+        header.classList.add('shrink');
+        navRow.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+        navRow.classList.remove('shrink');
+      }
+      lastScroll = y;
+    }, { passive: true });
+  })();
 
   // ====== Editable data (from your resume) ======
   const PROFILE = {
@@ -53,26 +53,47 @@ document.addEventListener("DOMContentLoaded", () => {
       tags: ["FastAPI", "GenAI", "Google Maps"],
     },
     {
+      title: "LoRA Text Classification (DistilBERT)",
+      desc:
+        "Fine-tuned DistilBERT with LoRA adapters for efficient text classification. Includes Docker setup and Gradio demo.",
+      href: "https://github.com/Janardhan11/lora-text-classification",
+      code: "https://github.com/Janardhan11/lora-text-classification",
+      demo: "", // or your deployed demo link if hosted
+      image:
+        "D:\portfolio - Copy\images\image2_ebf748a816.png", // replace with actual image path in your portfolio
+      tags: ["DistilBERT", "LoRA", "NLP", "Docker", "Gradio"],
+    },
+    {
+      title: "Predictive-Road_Maintenance",
+      desc: "Built an end-to-end AI demo that predicts road surface condition from images using MobileNetV2 CNN, estimates months until deterioration with a scikit-learn regression pipeline, and computes a normalized risk score (0–100) using traffic and weather metadata. Delivered as a Streamlit web app with caching, fallback logic, and clean UI.",
+      href: "#",
+      code: "https://github.com/Janardhan11/Predictive-Road-Maintenance",
+      demo: "https://drive.google.com/file/d/1u7wo0aXab3fhRlnG6X85Ny7lRTf2z213/view?usp=sharing",
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop",
+      tags: ["Python", "TensorFlow", "scikit-learn", "Streamlit", "Computer Vision", "ML Pipelines"]
+    },
+    {
       title: "Rice Leaf Disease Recognition",
       desc:
         "MobileNetV2 classifier on 5k+ images with a Gradio demo (90%+ accuracy).",
       href: "#",
       code: "#",
-      demo: "#",
+      demo: "https://drive.google.com/file/d/1u7wo0aXab3fhRlnG6X85Ny7lRTf2z213/view?usp=sharing",
       image:
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
+        "D:\portfolio - Copy\images\download.jpeg",
       tags: ["MobileNetV2", "Computer Vision", "Gradio"],
     },
     {
       title: "Steel Surface Defect Detection",
       desc:
-        "Masks → bboxes conversion and YOLOv8 training toolkit for industrial steel defects.",
+        "Automated steel inspection using DL: Classification (MobileNetV2, ResNet, VGG, EfficientNet) to detect defects, and U-Net segmentation to highlight exact defect regions. Achieved ~90% accuracy and pixel-level localization for real-time quality control.",
       href: "#",
-      code: "#",
+      code: "https://github.com/Janardhan11/Automating-Quality-Inspection-for-Fabricated-Steel-Parts",
       demo: "#",
       image:
         "https://images.unsplash.com/photo-1581092334808-1f3e6e6bafba?q=80&w=1600&auto=format&fit=crop",
-      tags: ["YOLOv8", "CV", "Kaggle"],
+      tags: ["MobileNetV2", "ResNet", "VGG", "EfficientNet", "U-Net", "TensorFlow", "OpenCV", "Severstal"],
     },
   ];
 
@@ -83,22 +104,40 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Data Science Intern",
       period: "Jul 2025 — Present",
       bullets: [
-        "Built 4+ ML models for industrial case studies (90%+ accuracy in some targets).",
-        "Designed Power BI dashboards reducing reporting time by 30%.",
-        "Analyzed 10,000+ rows of operational data to identify failure patterns.",
+        "Developed and fine-tuned ML models (classification & regression) using Python, scikit-learn, and XGBoost, improving baseline accuracy by 12%.",
+        "Built deep learning pipelines in TensorFlow and PyTorch for computer vision tasks such as CNN-based defect detection and image classification.",
+        "Applied NLP techniques (text preprocessing, embeddings, transformer models) to analyze unstructured text data and extract insights.",
+        "Wrote optimized Python + SQL scripts for preprocessing and feature engineering on 10k+ operational records, ensuring clean, structured datasets.",
+        "Prepared model predictions and KPIs to support the BI team’s Power BI dashboards, enabling data-driven stakeholder reporting.",
+        "Evaluated models using AUC, F1-Score, and confusion matrix; documented experiments with MLflow for reproducibility.",
+        "Containerized trained models with Docker and deployed FastAPI microservices for real-time inference with <250ms latency."
       ],
-      tags: ["Python", "Power BI", "XGBoost"],
+      tags: [
+        "Python", "SQL", "ML", "DL", "NLP", 
+        "TensorFlow", "PyTorch", "XGBoost", 
+        "FastAPI", "Docker", "MLflow"
+      ],
     },
     {
       company: "Indian Institute of Technology Mandi (IIT Mandi)",
       title: "Deep Learning Intern",
       period: "Jun 2023 — Jul 2023",
+      // 👉 Put your video demo URL here (YouTube or Google Drive)
+      video: "https://drive.google.com/file/d/1Or3hjVYb4Kfq41npSLj3AB5nvOh4YsEw/view?usp=sharing",
       bullets: [
-        "Built MobileNet-style CNN for NRIQA, achieving ~60% model size reduction.",
-        "Trained on TID2013 distortions; delivered validation MAE 0.283.",
-        "Presented results and dashboards to stakeholders to improve adoption.",
+        "Fine-tuned MobileNetV2 to predict image quality without a reference image.",
+        "Trained on KonIQ-10k / TID2013 distortions; achieved 0.82 Pearson correlation with human MOS.",
+        "Built Convolutional Autoencoder baseline and improved over it by +12% correlation.",
+        "Deployed a Gradio demo on Hugging Face (image upload → 0–100 quality score)",
+        "Reduced model size by ~60% with MobileNet-style architecture while preserving accuracy.",
+        "Delivered validation MAE 0.283; presented findings and dashboards to stakeholders.",
       ],
-      tags: ["PyTorch", "Model Optimization", "Edge AI"],
+      tags: [
+        "Python, TensorFlow/Keras",
+        "MobileNetV2 (Transfer Learning)",
+        "Convolutional Autoencoders (Baseline comparison)",
+        "OpenCV, Gradio/Streamlit (for demo)"
+      ],
     },
   ];
 
@@ -109,14 +148,21 @@ document.addEventListener("DOMContentLoaded", () => {
       org: "University (Completed)",
       period: "2022 — 2024",
       desc:
-        "Advanced training in machine learning, statistics, and big data, with focus on LLMs and Generative AI.",
-    },
+       [ "Specialized in Machine Learning, Deep Learning, NLP, and Generative AI.",
+        "Hands-on training in LLMs (BERT, GPT, Transformer models), Big Data technologies (Hadoop, Spark), and Cloud ML deployment.",
+        "Completed projects in Predictive Modeling, Recommendation Systems, and AI Trip Planner (FastAPI + Google Maps API).",
+        "Thesis focused on applications of Deep Learning Models for domain-specific text understanding.",
+       ]
+      },
     {
       degree: "BSc Statistics",
       org: "University (Completed)",
       period: "2019 — 2022",
       desc:
-        "Strong foundation in probability, statistical inference, and data analysis for applied ML research.",
+        ["Strong foundation in Probability, Statistical Inference, Regression, and Hypothesis Testing.",
+          "Applied R and Python for data analysis, exploratory data visualization, and time-series forecasting.",
+          "Capstone project: Predictive Analytics using Statistical Models for real-world datasets."
+        ]
     },
   ];
 
@@ -283,6 +329,20 @@ document.addEventListener("DOMContentLoaded", () => {
         card.appendChild(company);
         card.appendChild(achievements);
         if ((e.tags || []).length) card.appendChild(tagsWrap);
+
+        // actions (e.g., Watch Demo button) aligned bottom-right
+        if (e.video) {
+          const actions = document.createElement("div");
+          actions.className = "exp-actions";
+          const videoBtn = document.createElement("a");
+          videoBtn.href = e.video;
+          videoBtn.target = "_blank";
+          videoBtn.rel = "noopener noreferrer";
+          videoBtn.className = "btn-primary";
+          videoBtn.textContent = "Watch Demo";
+          actions.appendChild(videoBtn);
+          card.appendChild(actions);
+        }
 
         experienceCardsContainer.appendChild(card);
       });
