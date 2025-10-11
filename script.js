@@ -64,6 +64,17 @@ document.addEventListener("DOMContentLoaded", () => {
       tags: ["DistilBERT", "LoRA", "NLP", "Docker", "Gradio"],
     },
     {
+      title: "Africa Water \& Sanitation Forecasting Dashboard",
+      desc:
+        "Designed forecasting models and built interactive Power BI dashboards to track SDG-6 metrics (water, sanitation, hygiene) across African regions.",
+      href: "#",
+      code: "https://github.com/Janardhan11/Africa-Water-Sanitation-Forecasting-Dashboard",
+      demo: "href{https://docs.google.com/presentation/d/1jmQQARNpxfZ-HJMy7v7P2YhSo93zSnNP3NLZ0_VWAiw/edit?usp=sharing",
+      image:
+        "images/what-is-water-really-worth-report-rectangle.jpg",
+      tags: ["MobileNetV2", "ResNet", "VGG", "EfficientNet", "U-Net", "TensorFlow", "OpenCV", "Severstal"],
+    },
+    {
       title: "Predictive-Road_Maintenance",
       desc: "Built an end-to-end AI demo that predicts road surface condition from images using MobileNetV2 CNN, estimates months until deterioration with a scikit-learn regression pipeline, and computes a normalized risk score (0–100) using traffic and weather metadata. Delivered as a Streamlit web app with caching, fallback logic, and clean UI.",
       href: "#",
