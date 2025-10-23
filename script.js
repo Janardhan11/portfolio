@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ====== Editable data (from your resume) ======
   const PROFILE = {
     name: "Medathati Janardhan",
-    email: "7janardhan7@gmail.com",
+    email: "janardhan.medathti@gmail.com",
     resumeUrl:
       "https://drive.google.com/file/d/10nRuudt89s_Z6wlftGfzTL1y6SiNoxL0/view?usp=sharing",
   };
