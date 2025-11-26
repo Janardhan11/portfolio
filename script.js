@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     name: "Medathati Janardhan",
     email: "janardhan.medathti@gmail.com",
     resumeUrl:
-      "https://drive.google.com/file/d/10nRuudt89s_Z6wlftGfzTL1y6SiNoxL0/view?usp=sharing",
+      "https://drive.google.com/file/d/1FFpZHz7XLHPuqhllcnxHJYjzNXRX5doA/view?usp=sharing",
   };
 
   const SKILLS = [
