@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     name: "Medathati Janardhan",
     email: "janardhan.medathti@gmail.com",
     resumeUrl:
-      "https://drive.google.com/file/d/1_CQeIURpXPw2t5eEbdMdiVkKv3bOS6xS/view?usp=sharing",
+      "https://drive.google.com/file/d/1vk2M2rqV4XnwGnQA6vaozfQvndC-Ki8_/view?usp=sharing",
   };
 
   const SKILLS = [
@@ -111,22 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Experience items (will be shown in Experience tab)
   const EXPERIENCE = [
     {
-      company: "Red Switch Global",
-      title: "Data Science Intern",
+      company: "Canopus GBS",
+      title: "Intern",
       period: "Jul 2025 — Present",
       bullets: [
-        "Developed and fine-tuned ML models (classification & regression) using Python, scikit-learn, and XGBoost, improving baseline accuracy by 12%.",
-        "Built deep learning pipelines in TensorFlow and PyTorch for computer vision tasks such as CNN-based defect detection and image classification.",
-        "Applied NLP techniques (text preprocessing, embeddings, transformer models) to analyze unstructured text data and extract insights.",
-        "Wrote optimized Python + SQL scripts for preprocessing and feature engineering on 10k+ operational records, ensuring clean, structured datasets.",
-        "Prepared model predictions and KPIs to support the BI team’s Power BI dashboards, enabling data-driven stakeholder reporting.",
-        "Evaluated models using AUC, F1-Score, and confusion matrix; documented experiments with MLflow for reproducibility.",
-        "Containerized trained models with Docker and deployed FastAPI microservices for real-time inference with <250ms latency."
+        "Contributed to maintaining and enhancing an existing Python/Django backend system by implementing 6–8 functional updates based on internal requirements.",
+        "Analyzed and resolved 8–12 bugs related to incorrect data values, business logic errors, and API responses.",
+        "Identified and corrected data inconsistencies across 4–5 MongoDB collections, improving the reliability of internal reports.",
+        "Updated and optimized selected MongoDB queries and aggregation logic to improve backend response stability.",
+        "Implemented minor frontend updates and API integrations to support 5–10 internal users accessing reporting dashboards.",
+        " Worked closely with 2–3 senior developers and internal stakeholders to understand issues and deliver stable production updates.",
       ],
       tags: [
-        "Python", "SQL", "ML", "DL", "NLP", 
-        "TensorFlow", "PyTorch", "XGBoost", 
-        "FastAPI", "Docker", "MLflow"
+        "Python", "NoSQL", "Django", "MongoDB"
       ],
     },
     {
